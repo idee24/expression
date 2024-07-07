@@ -1,6 +1,7 @@
 package Interpreter;
 
 import java.util.HashMap;
+import java.util.Scanner;
 import java.util.function.Consumer;
 
 import Context.Environnement;
@@ -34,7 +35,7 @@ public class Console {
         System.out.println("Starting console...");
         while (this.running) {
             System.out.println("Enter your command / expr: ");
-            String input = System.console().readLine();
+            String input = new Scanner(System.in).nextLine();
             this.runCommand(input);
         }
     }
